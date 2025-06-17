@@ -1,6 +1,7 @@
 
-Этот репозиторий содержит примеры использования RxJava для изучения программирования на Java.
+# Этот репозиторий содержит примеры использования RxJava для изучения программирования на Java.
 
+## Особенности проекта 
 
 - Базовые примеры использования RxJava (Observable, Observer, операторы)
 - Примеры многопоточности (Schedulers)
@@ -9,29 +10,36 @@
 - И другие практические примеры
 
 
-/src/main/java/
-    /basics               - Основные концепции RxJava
-        ○ CreatingObservables.java   - Способы создания Observable
-        ○ HelloRxJava.java          - Простейший пример
-        ○ Subscribers.java         - Различные варианты подписчиков
-    
-    /operators            - Операторы RxJava
-        ○ FilteringOperators.java   - Фильтрация данных
-        ○ TransformingOperators.java - Преобразование данных
-        ○ UtilityOperators.java     - Вспомогательные операторы
-    
-    /multithread          - Многопоточность
-        ○ SchedulersExample.java    - Работа с планировщиками
-        ○ ConcurrencyExample.java   - Примеры параллельной работы
-    
-    /error                - Обработка ошибок
-        ○ ErrorHandling.java        - Основные стратегии
-        ○ RetryExamples.java        - Примеры повторных попыток
-    
-    /combining            - Комбинирование потоков
-        ○ MergeAndConcat.java      - Слияние потоков
-        ○ ZipAndCombine.java       - Комбинирование данных
-    
-    /advanced             - Продвинутые темы
-        ○ Backpressure.java        - Работа с backpressure
-        ○ CustomOperators.java     - Создание своих операторов
+## Структура проекта 
+├── README.md
+└── src
+    ├── main
+    │   └── java
+    │       └── rx
+    │           ├── Disposable.java
+    │           ├── Observable.java
+    │           ├── Observer.java
+    │           ├── operators
+    │           │   ├── Filter.java
+    │           │   ├── FlatMap.java
+    │           │   └── Map.java
+    │           ├── Scheduler.java
+    │           └── schedulers
+    │               ├── Computation.java
+    │               ├── IO.java
+    │               └── Single.java
+    ├── pom.xml
+    └── test
+        └── java
+            └── rx
+                ├── ObservableTest.java
+                ├── OperatorsTest.java
+                └── SchedulerTest.java
+
+## Заупск проекта 
+
+```
+mnv clean install
+```
+
+
